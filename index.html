@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>JKH Test</title>
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!--<div class="statusbar-overlay"></div>-->
+
+<div class="panel-overlay"></div>
+
+<div class="views">
+    <div class="view view-main">
+        <!-- start navbars -->
+
+    <div class="navbar">
+        <div class="navbar-inner" data-page="index">
+            <div class="left sliding"></div>
+            <div class="center sliding">Menu</div>
+            <div class="right sliding"></div>
+        </div>
+
+
+        <div class="navbar-inner cached" data-page="drag-and-drop">
+            <div class="left sliding">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span>Back</span>
+                </a>
+            </div>
+            <div class="center sliding">drag-and-drop</div>
+            <div class="right sliding"></div>
+        </div>
+
+        <div class="navbar-inner cached" data-page="charts">
+            <div class="left sliding">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span>Back</span>
+                </a>
+            </div>
+            <div class="center sliding">charts</div>
+            <div class="right sliding"></div>
+            <div class="subnavbar">
+                <div class="buttons-row">
+                    <a href="#tab1" class="button tab-link active">Line</a>
+                    <a href="#tab2" class="button tab-link">Bar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-inner cached" data-page="ball">
+            <div class="left sliding">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span>Back</span>
+                </a>
+            </div>
+            <div class="center sliding">ball</div>
+            <div class="right sliding"></div>
+        </div>
+
+    </div>
+        <!-- end navbars -->
+
+
+        <div class="pages navbar-through toolbar-through">  <!-- start pages -->
+
+            <div data-page="index" class="page">      <!-- start menu -->
+                <div class="page-content" id="menu_cont">
+                    <ul type="none" class="menuList">
+                        <li data-link="drag-and-drop">Drag-and-drop</li>
+                        <li data-link="charts">Charts</li>
+                        <li data-link="ball">Ball</li>
+                    </ul>
+                </div>
+            </div>      <!-- end menu -->
+
+            <div data-page="drag-and-drop" class="page cached">      <!-- start drag-and-drop -->
+                <div class="page-content" id="drag_cont">
+                    <p class="control">
+                        <a href="#" data-sortable=".sortable" class="toggle-sortable">Toggle sortable</a>
+                    </p>
+                    <div class="list-block sortable">
+                        <ul id="sortableList"></ul>
+                    </div>
+                </div>
+            </div>      <!-- end drag-and-drop -->
+
+            <div data-page="charts" class="page cached with-subnavbar">      <!-- start charts -->
+                <div class="page-content" id="charts_cont">
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">
+                            <div class="content-block">
+                                <canvas id="myLineChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="content-block">
+                                <canvas id="myBarChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      <!-- end charts -->
+
+            <div data-page="ball" class="page cached">      <!-- start ball -->
+                <div class="page-content" id="ball_cont">
+                    <div class="controlPanel">
+                        <div class="startBtn controlBtn">Start</div>
+                        <div class="finishBtn controlBtn">Stop</div>
+                        <div class="slider-wrapper">
+                            <label>Ball's speed
+                                <input id="speedControl" type="range" min="0" max="10" value="5" step="1">
+                            </label>
+                        </div>
+                    </div>
+                   <div id="ball"></div>
+                </div>
+            </div>      <!-- end ball -->
+
+        </div> <!-- end pages -->
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/chart.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/drag-drop.js"></script>
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/ball.js"></script>
+</body>
+
+</html>
